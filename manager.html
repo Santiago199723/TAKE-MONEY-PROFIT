@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LICENCIADOR TAKE MONEY PROFIT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('fundo.png'); /* Substitua pela URL da sua imagem */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-container {
+            margin-bottom: 20px;
+        }
+
+        .input-container input {
+            padding: 10px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .input-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #179475;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .input-container button:hover {
+            background-color: #0d5c5c;
+        }
+
+        .message {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>LICENCIADOR DE ID's</h1>
+        <div class="input-container">
+            <input type="text" id="idInput" placeholder="Digite aqui o ID">
+            <button onclick="storeId()">Salvar</button>
+        </div>
+        <div class="message" id="message"></div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCBhTGEFf44mkEIXojWpSWJdfwAX9rL4mk",
+            authDomain: "licenciador-indicador-take.firebaseapp.com",
+            databaseURL: "https://licenciador-indicador-take-default-rtdb.firebaseio.com",
+            projectId: "licenciador-indicador-take",
+            storageBucket: "licenciador-indicador-take.appspot.com",
+            messagingSenderId: "790352983571",
+            appId: "1:790352983571:web:682993cee9ed3cb42131e6",
+            measurementId: "G-80G2EECFSD"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+
+        function storeId() {
+            var idInput = document.getElementById("idInput").value.trim();
+            var messageDiv = document.getElementById("message");
+
+            if (idInput === "") {
+                messageDiv.innerHTML = "<span style='color: red;'>Por favor, digite um ID!</span>";
+                return;
+            }
+
+            if (idInput.length < 8) {
+                messageDiv.innerHTML = "<span style='color: red;'>O ID deve ter 8 caracteres!</span>";
+                return;
+            }
+
+            var idRef = database.ref('ids/' + idInput);
+            idRef.once('value', function (snapshot) {
+                if (snapshot.exists()) {
+                    messageDiv.innerHTML = "<span style='color: red;'>ID já existe!</span>";
+                } else {
+                    var timestamp = new Date().toISOString();
+                    idRef.set({
+                        savedAt: timestamp
+                    }, function (error) {
+                        if (error) {
+                            messageDiv.innerHTML = "<span style='color: red;'>Erro ao guardar o ID.</span>";
+                        } else {
+                            messageDiv.innerHTML = "<span style='color: green;'>ID guardado com sucesso!</span>";
+                            document.getElementById("idInput").value = "";
+                        }
+                    });
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
