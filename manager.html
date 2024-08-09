@@ -8,7 +8,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('fundo.png'); /* Substitua pela URL da sua imagem */
+            background-image: url('fundo.png');
+            /* Substitua pela URL da sua imagem */
             background-size: cover;
             background-position: center;
             display: flex;
@@ -64,9 +65,9 @@
 <body>
 
     <div class="container">
-        <h1>LICENCIADOR DE ID's</h1>
+        <h1>LICENCIADOR</h1>
         <div class="input-container">
-            <input type="text" id="idInput" placeholder="Digite aqui o ID">
+            <input type="text" id="idInput" placeholder="Digite aqui o E-mail">
             <button onclick="storeId()">Salvar</button>
         </div>
         <div class="message" id="message"></div>
@@ -94,16 +95,17 @@
             var messageDiv = document.getElementById("message");
 
             if (idInput === "") {
-                messageDiv.innerHTML = "<span style='color: red;'>Por favor, digite um ID!</span>";
+                messageDiv.innerHTML = "<span style='color: red;'>Por favor, digite um E-mail!</span>";
                 return;
             }
 
-            if (idInput.length < 8) {
-                messageDiv.innerHTML = "<span style='color: red;'>O ID deve ter 8 caracteres!</span>";
-                return;
+
+            const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+            if (!re.test(idInput)) {
+                return toastr.info('Digite um E-mail válido para continuar')
             }
 
-            var idRef = database.ref('ids/' + idInput);
+            var idRef = database.ref('ids/' + btoa(idInput));
             idRef.once('value', function (snapshot) {
                 if (snapshot.exists()) {
                     messageDiv.innerHTML = "<span style='color: red;'>ID já existe!</span>";

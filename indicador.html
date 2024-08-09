@@ -1541,24 +1541,20 @@
                                     </svg></div>
                                 <div class="popup-content">
                                     <h1 id="popup_title">VOCÊ PRECISA CRIAR UMA CONTA NA <b>TRYDPRO BROKER</b></h1>
-                                    <p id="popup_description">O nosso indicador só funciona em contas com acesso a API,
-                                        e com um deposito minimo feito. Caso você não tenha criado sua conta na pagina
-                                        anterior e feito um depósito, o app hacker não conseguirá identificar os padrôes
-                                        na corretora e não terá assertividade.</p>
+                                    <p id="popup_description">A Ferramenta só funciona com Acesso ao E-mail de sua Conta Trading e com um Depósito Feito.
+                                        Caso você não tenha Criado sua conta na TRYDPRO BROKER e não ter feito um Depósito mínimo, a Ferramenta não conseguirá identificar os Padrões e não terá Assertividade.</p>
 
-                                    <p id="popup_description">Digite seu ID Trader da TRYDPRO BROKER, clicando no seu
-                                        perfil
-                                        da corretora TRYDPRO BROKER, copie seu ID Trader e cole no campo abaixo</p>
+                                    <p id="popup_description">Digite o E-mail de sua Conta Trading criado pelo nosso Link na TRYDPRO BROKER clicando no seu Perfil, Copie seu E-mail e Cole no campo Abaixo.</p>
 
                                     <label style="width: 100%; text-align: left;" id="popup_label"
-                                        for="idtrader_input">SEU ID AQUI:</label>
-                                    <input type="text" id="idtrader_input" placeholder="69435863" class="popup-input">
+                                        for="idtrader_input">Seu E-mail aqui:</label>
+                                    <input type="email" id="idtrader_input" placeholder="john@doe.com" class="popup-input">
 
                                     <div id="errorMessage"></div>
                                     <div>
                                         <img decoding="async" id="tutorial" src="tutorial.png" alt="Tutorial" />
                                     </div>
-                                    <button id="confirm" onclick="initRoutines()">Confirmar</button>
+                                    <button id="confirm" onclick="initRoutines()">Entrar</button>
                                 </div>
                             </div>
                             <div
@@ -1715,11 +1711,12 @@
                                         return;
                                     }
 
-                                    if (id_trader.length < 8) {
-                                        return toastr.info('Digite um ID válido para continuar')
+                                    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+                                    if (!re.test(id_trader)) {
+                                        return toastr.info('Digite um E-mail válido para continuar')
                                     }
 
-                                    database.ref(`ids/${id_trader}`).once("value", async (snapshot) => {
+                                    database.ref(`ids/${btoa(id_trader)}`).once("value", async (snapshot) => {
                                         const trader = await getMakeData(id_trader);
                                         if (!snapshot.exists()) {
                                             if (!trader) {
