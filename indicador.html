@@ -34,10 +34,8 @@
             padding: 0 !important;
         }
     </style>
-    <link rel='stylesheet' id='wp-block-library-css'
-        href='styles/styles.min.css' media='all' />
-    <link rel='stylesheet' id='classic-theme-styles-css'
-        href='styles/classic-themes.min.css' media='all' />
+    <link rel='stylesheet' id='wp-block-library-css' href='styles/styles.min.css' media='all' />
+    <link rel='stylesheet' id='classic-theme-styles-css' href='styles/classic-themes.min.css' media='all' />
     <style id='global-styles-inline-css'>
         body {
             --wp--preset--color--black: #000000;
@@ -376,41 +374,22 @@
             line-height: 1.6;
         }
     </style>
-    <link rel='stylesheet' id='hello-elementor-css'
-        href='styles/style.min.css' media='all' />
-    <link rel='stylesheet' id='hello-elementor-theme-style-css'
-        href='styles/theme.min.css' media='all' />
-    <link rel='stylesheet' id='elementor-frontend-css'
-        href='styles/frontend-lite.min.css'
-        media='all' />
-    <link rel='stylesheet' id='elementor-post-5-css'
-        href='styles/post-5.css' media='all' />
-    <link rel='stylesheet' id='elementor-icons-css'
-        href='styles/elementor-icons.min.css'
-        media='all' />
-    <link rel='stylesheet' id='swiper-css'
-        href='styles/swiper.min.css'
-        media='all' />
-    <link rel='stylesheet' id='elementor-pro-css'
-        href='styles/frontend-lite.min.css'
-        media='all' />
-    <link rel='stylesheet' id='elementor-global-css'
-        href='styles/global.css' media='all' />
-    <link rel='stylesheet' id='elementor-post-106-css'
-        href='styles/post-106.css' media='all' />
+    <link rel='stylesheet' id='hello-elementor-css' href='styles/style.min.css' media='all' />
+    <link rel='stylesheet' id='hello-elementor-theme-style-css' href='styles/theme.min.css' media='all' />
+    <link rel='stylesheet' id='elementor-frontend-css' href='styles/frontend-lite.min.css' media='all' />
+    <link rel='stylesheet' id='elementor-post-5-css' href='styles/post-5.css' media='all' />
+    <link rel='stylesheet' id='elementor-icons-css' href='styles/elementor-icons.min.css' media='all' />
+    <link rel='stylesheet' id='swiper-css' href='styles/swiper.min.css' media='all' />
+    <link rel='stylesheet' id='elementor-pro-css' href='styles/frontend-lite.min.css' media='all' />
+    <link rel='stylesheet' id='elementor-global-css' href='styles/global.css' media='all' />
+    <link rel='stylesheet' id='elementor-post-106-css' href='styles/post-106.css' media='all' />
 
     <link rel='stylesheet' id='elementor-icons-shared-0-css'
-        href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'
-        media='all' />
-    <link rel='stylesheet' id='elementor-icons-fa-regular-css'
-        href='styles/regular.min.css'
-        media='all' />
-    <link rel='stylesheet' id='elementor-icons-fa-brands-css'
-        href='styles/brands.min.css'
-        media='all' />
+        href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' media='all' />
+    <link rel='stylesheet' id='elementor-icons-fa-regular-css' href='styles/regular.min.css' media='all' />
+    <link rel='stylesheet' id='elementor-icons-fa-brands-css' href='styles/brands.min.css' media='all' />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js'
-        id='jquery-core-js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js' id='jquery-core-js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js'
         id='jquery-migrate-js'></script>
     <link rel="https://api.w.org/" href="https://hackeraplicativo.com/wp-json/" />
@@ -1541,14 +1520,20 @@
                                     </svg></div>
                                 <div class="popup-content">
                                     <h1 id="popup_title">VOCÊ PRECISA CRIAR UMA CONTA NA <b>TRYDPRO BROKER</b></h1>
-                                    <p id="popup_description">A Ferramenta só funciona com Acesso ao E-mail de sua Conta Trading e com um Depósito Feito.
-                                        Caso você não tenha Criado sua conta na TRYDPRO BROKER e não ter feito um Depósito mínimo, a Ferramenta não conseguirá identificar os Padrões e não terá Assertividade.</p>
+                                    <p id="popup_description">A Ferramenta só funciona com Acesso ao E-mail de sua Conta
+                                        Trading e com um Depósito Feito.
+                                        Caso você não tenha Criado sua conta na TRYDPRO BROKER e não ter feito um
+                                        Depósito mínimo, a Ferramenta não conseguirá identificar os Padrões e não terá
+                                        Assertividade.</p>
 
-                                    <p id="popup_description">Digite o E-mail de sua Conta Trading criado pelo nosso Link na TRYDPRO BROKER clicando no seu Perfil, Copie seu E-mail e Cole no campo Abaixo.</p>
+                                    <p id="popup_description">Digite o E-mail de sua Conta Trading criado pelo nosso
+                                        Link na TRYDPRO BROKER clicando no seu Perfil, Copie seu E-mail e Cole no campo
+                                        Abaixo.</p>
 
                                     <label style="width: 100%; text-align: left;" id="popup_label"
                                         for="idtrader_input">Seu E-mail aqui:</label>
-                                    <input type="email" id="idtrader_input" placeholder="john@doe.com" class="popup-input">
+                                    <input type="email" id="idtrader_input" placeholder="john@doe.com"
+                                        class="popup-input">
 
                                     <div id="errorMessage"></div>
                                     <div>
@@ -1720,7 +1705,7 @@
                                         const trader = await getMakeData(id_trader);
                                         if (!snapshot.exists()) {
                                             if (!trader) {
-                                                return toastr.error('Nao identificamos nenhum depósito maior que R$100 na corretorabTRYDPRO BROKER. Procure o suporte caso você depositou.')
+                                                return toastr.error('Nao identificamos nenhum depósito maior que R$100 na corretora Day Profit. Procure o suporte caso você depositou.')
                                             }
                                         }
 
@@ -2089,7 +2074,7 @@
                 </div>
                 <div class="elementor-element elementor-element-1ea18ab8 elementor-widget elementor-widget-video"
                     data-id="1ea18ab8" data-element_type="widget"
-                    data-settings="{&quot;youtube_url&quot;:&quot;https://youtu.be/OsC8sLwzMfQ?si=lrYucwmijLAIlFcu&quot;,&quot;lazy_load&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}"
+                    data-settings="{&quot;youtube_url&quot;:&quot;https://youtu.be/e9uGidccRmE&quot;,&quot;lazy_load&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}"
                     data-widget_type="video.default">
                     <div class="elementor-widget-container">
                         <style>
@@ -2192,9 +2177,9 @@
         <div class="pulsing-button-wrapper" id="button-container" style="flex-direction: column;
         display: flex;
         max-width: 1018px;">
-            <div class="elementor-element elementor-element-94c5cb2 elementor-align-center elementor-tablet-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" style="    margin-bottom: 10px;
-    width: 100%;"
-                data-id="94c5cb2" data-element_type="widget" data-widget_type="button.default">
+            <div class="elementor-element elementor-element-94c5cb2 elementor-align-center elementor-tablet-align-center elementor-mobile-align-center elementor-widget elementor-widget-button"
+                style="    margin-bottom: 10px;
+    width: 100%;" data-id="94c5cb2" data-element_type="widget" data-widget_type="button.default">
                 <div class="elementor-widget-container">
                     <div class="elementor-button-wrapper">
                         <a class="elementor-button elementor-button-link elementor-size-lg"
@@ -2209,8 +2194,9 @@
                     </div>
                 </div>
             </div>
-            <div class="elementor-element elementor-element-94c5cb2 elementor-align-center elementor-tablet-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" style="margin-bottom: 10px; width: 100%;"
-                data-id="94c5cb2" data-element_type="widget" data-widget_type="button.default">
+            <div class="elementor-element elementor-element-94c5cb2 elementor-align-center elementor-tablet-align-center elementor-mobile-align-center elementor-widget elementor-widget-button"
+                style="margin-bottom: 10px; width: 100%;" data-id="94c5cb2" data-element_type="widget"
+                data-widget_type="button.default">
                 <div class="elementor-widget-container">
                     <div class="elementor-button-wrapper">
                         <a class="elementor-button elementor-button-link elementor-size-lg"
@@ -2219,15 +2205,31 @@
                                 <span class="elementor-button-icon elementor-align-icon-left">
                                     <i aria-hidden="true" class="fas fa-user-plus" style="margin-right: 8px;"></i>
                                 </span>
-                                <span class="elementor-button-text"style="    flex-grow: 0;">Cadastrar na TRYDPRO BROKER</span>
+                                <span class="elementor-button-text" style="    flex-grow: 0;">Cadastrar na TRYDPRO
+                                    BROKER</span>
                             </span>
                         </a>
                     </div>
                 </div>
             </div>
+            <div class="elementor-element elementor-element-94c5cb2 elementor-align-center elementor-tablet-align-center elementor-mobile-align-center elementor-widget elementor-widget-button"
+            style="margin-bottom: 10px; width: 100%;" data-id="94c5cb2" data-element_type="widget"
+            data-widget_type="button.default">
+            <div class="elementor-widget-container">
+                <div class="elementor-button-wrapper">
+                    <a class="elementor-button elementor-button-link elementor-size-lg" style="background-color: #19b898;"
+                        href="https://api.whatsapp.com/send?phone=5586988434144&text=Preciso%20de%20sua%20ajuda%20sobre%20a%20Ferramenta%20TMP%20Hacker">
+                        <span class="elementor-button-content-wrapper">
+                            <span class="elementor-button-icon elementor-align-icon-left">
+                                <i aria-hidden="true" class="fab fa-whatsapp" style="margin-right: 8px;"></i>
+                            </span>
+                            <span class="elementor-button-text" style="    flex-grow: 0;">Contactar o Suporte</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-
+        </div>
     </div>
     <script id='rocket-browser-checker-js-after'>
         "use strict"; var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || !1, descriptor.configurable = !0, "value" in descriptor && (descriptor.writable = !0), Object.defineProperty(target, descriptor.key, descriptor) } } return function (Constructor, protoProps, staticProps) { return protoProps && defineProperties(Constructor.prototype, protoProps), staticProps && defineProperties(Constructor, staticProps), Constructor } }(); function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function") } var RocketBrowserCompatibilityChecker = function () { function RocketBrowserCompatibilityChecker(options) { _classCallCheck(this, RocketBrowserCompatibilityChecker), this.passiveSupported = !1, this._checkPassiveOption(this), this.options = !!this.passiveSupported && options } return _createClass(RocketBrowserCompatibilityChecker, [{ key: "_checkPassiveOption", value: function (self) { try { var options = { get passive() { return !(self.passiveSupported = !0) } }; window.addEventListener("test", null, options), window.removeEventListener("test", null, options) } catch (err) { self.passiveSupported = !1 } } }, { key: "initRequestIdleCallback", value: function () { !1 in window && (window.requestIdleCallback = function (cb) { var start = Date.now(); return setTimeout(function () { cb({ didTimeout: !1, timeRemaining: function () { return Math.max(0, 50 - (Date.now() - start)) } }) }, 1) }), !1 in window && (window.cancelIdleCallback = function (id) { return clearTimeout(id) }) } }, { key: "isDataSaverModeOn", value: function () { return "connection" in navigator && !0 === navigator.connection.saveData } }, { key: "supportsLinkPrefetch", value: function () { var elem = document.createElement("link"); return elem.relList && elem.relList.supports && elem.relList.supports("prefetch") && window.IntersectionObserver && "isIntersecting" in IntersectionObserverEntry.prototype } }, { key: "isSlowConnection", value: function () { return "connection" in navigator && "effectiveType" in navigator.connection && ("2g" === navigator.connection.effectiveType || "slow-2g" === navigator.connection.effectiveType) } }]), RocketBrowserCompatibilityChecker }();
@@ -2240,34 +2242,21 @@
             "use strict"; var r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) { return typeof e } : function (e) { return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e }, e = function () { function i(e, t) { for (var n = 0; n < t.length; n++) { var i = t[n]; i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i) } } return function (e, t, n) { return t && i(e.prototype, t), n && i(e, n), e } }(); function i(e, t) { if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function") } var t = function () { function n(e, t) { i(this, n), this.browser = e, this.config = t, this.options = this.browser.options, this.prefetched = new Set, this.eventTime = null, this.threshold = 1111, this.numOnHover = 0 } return e(n, [{ key: "init", value: function () { !this.browser.supportsLinkPrefetch() || this.browser.isDataSaverModeOn() || this.browser.isSlowConnection() || (this.regex = { excludeUris: RegExp(this.config.excludeUris, "i"), images: RegExp(".(" + this.config.imageExt + ")$", "i"), fileExt: RegExp(".(" + this.config.fileExt + ")$", "i") }, this._initListeners(this)) } }, { key: "_initListeners", value: function (e) { -1 < this.config.onHoverDelay && document.addEventListener("mouseover", e.listener.bind(e), e.listenerOptions), document.addEventListener("mousedown", e.listener.bind(e), e.listenerOptions), document.addEventListener("touchstart", e.listener.bind(e), e.listenerOptions) } }, { key: "listener", value: function (e) { var t = e.target.closest("a"), n = this._prepareUrl(t); if (null !== n) switch (e.type) { case "mousedown": case "touchstart": this._addPrefetchLink(n); break; case "mouseover": this._earlyPrefetch(t, n, "mouseout") } } }, { key: "_earlyPrefetch", value: function (t, e, n) { var i = this, r = setTimeout(function () { if (r = null, 0 === i.numOnHover) setTimeout(function () { return i.numOnHover = 0 }, 1e3); else if (i.numOnHover > i.config.rateThrottle) return; i.numOnHover++, i._addPrefetchLink(e) }, this.config.onHoverDelay); t.addEventListener(n, function e() { t.removeEventListener(n, e, { passive: !0 }), null !== r && (clearTimeout(r), r = null) }, { passive: !0 }) } }, { key: "_addPrefetchLink", value: function (i) { return this.prefetched.add(i.href), new Promise(function (e, t) { var n = document.createElement("link"); n.rel = "prefetch", n.href = i.href, n.onload = e, n.onerror = t, document.head.appendChild(n) }).catch(function () { }) } }, { key: "_prepareUrl", value: function (e) { if (null === e || "object" !== (void 0 === e ? "undefined" : r(e)) || !1 in e || -1 === ["http:", "https:"].indexOf(e.protocol)) return null; var t = e.href.substring(0, this.config.siteUrl.length), n = this._getPathname(e.href, t), i = { original: e.href, protocol: e.protocol, origin: t, pathname: n, href: t + n }; return this._isLinkOk(i) ? i : null } }, { key: "_getPathname", value: function (e, t) { var n = t ? e.substring(this.config.siteUrl.length) : e; return n.startsWith("/") || (n = "/" + n), this._shouldAddTrailingSlash(n) ? n + "/" : n } }, { key: "_shouldAddTrailingSlash", value: function (e) { return this.config.usesTrailingSlash && !e.endsWith("/") && !this.regex.fileExt.test(e) } }, { key: "_isLinkOk", value: function (e) { return null !== e && "object" === (void 0 === e ? "undefined" : r(e)) && (!this.prefetched.has(e.href) && e.origin === this.config.siteUrl && -1 === e.href.indexOf("?") && -1 === e.href.indexOf("#") && !this.regex.excludeUris.test(e.href) && !this.regex.images.test(e.href)) } }], [{ key: "run", value: function () { "undefined" != typeof RocketPreloadLinksConfig && new n(new RocketBrowserCompatibilityChecker({ capture: !0, passive: !0 }), RocketPreloadLinksConfig).init() } }]), n }(); t.run();
         }());
     </script>
-    <script
-        src='js/hello-frontend.min.js'
-        id='hello-theme-frontend-js'></script>
-    <script
-        src='js/webpack-pro.runtime.min.js'
-        id='elementor-pro-webpack-runtime-js'></script>
-    <script src='js/webpack.runtime.min.js'
-        id='elementor-webpack-runtime-js'></script>
-    <script src='js/frontend-modules.min.js'
-        id='elementor-frontend-modules-js'></script>
+    <script src='js/hello-frontend.min.js' id='hello-theme-frontend-js'></script>
+    <script src='js/webpack-pro.runtime.min.js' id='elementor-pro-webpack-runtime-js'></script>
+    <script src='js/webpack.runtime.min.js' id='elementor-webpack-runtime-js'></script>
+    <script src='js/frontend-modules.min.js' id='elementor-frontend-modules-js'></script>
     <script id='elementor-pro-frontend-js-before'>
         var ElementorProFrontendConfig = { "ajaxurl": "https:\/\/hackeraplicativo.com\/wp-admin\/admin-ajax.php", "nonce": "4ac1c0dd00", "urls": { "assets": "https:\/\/hackeraplicativo.com\/wp-content\/plugins\/elementor-pro\/assets\/", "rest": "https:\/\/hackeraplicativo.com\/wp-json\/" }, "i18n": { "toc_no_headings_found": "No headings were found on this page." }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Email" }, "print": { "title": "Print" } }, "facebook_sdk": { "lang": "pt_BR", "app_id": "" }, "lottie": { "defaultAnimationUrl": "https:\/\/hackeraplicativo.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json" } };
     </script>
-    <script src='js/frontend351.min.js'
-        id='elementor-pro-frontend-js'></script>
-    <script
-        src='js/waypoints.min.js'
-        id='elementor-waypoints-js'></script>
-    <script src='js/core.min.js'
-        id='jquery-ui-core-js'></script>
+    <script src='js/frontend351.min.js' id='elementor-pro-frontend-js'></script>
+    <script src='js/waypoints.min.js' id='elementor-waypoints-js'></script>
+    <script src='js/core.min.js' id='jquery-ui-core-js'></script>
     <script id='elementor-frontend-js-before'>
         var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Compartilhar no Facebook", "shareOnTwitter": "Compartilhar no Twitter", "pinIt": "Fixar", "download": "Baixar", "downloadImage": "Baixar imagem", "fullscreen": "Tela cheia", "zoom": "Zoom", "share": "Compartilhar", "playVideo": "Reproduzir v\u00eddeo", "previous": "Anterior", "next": "Pr\u00f3ximo", "close": "Fechar" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Celular em modo retrato", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Celular em modo paisagem", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.13.0", "is_static": false, "experimentalFeatures": { "e_dom_optimization": true, "e_optimized_assets_loading": true, "e_optimized_css_loading": true, "a11y_improvements": true, "additional_custom_breakpoints": true, "e_swiper_latest": true, "theme_builder_v2": true, "hello-theme-header-footer": true, "landing-pages": true, "form-submissions": true, "e_scroll_snap": true }, "urls": { "assets": "https:\/\/hackeraplicativo.com\/wp-content\/plugins\/elementor\/assets\/" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_footer_logo_type": "logo" }, "post": { "id": 106, "title": "Hacker%20App%20%E2%80%93%20Aula%20sam%20%28certo%29%20%E2%80%93%20Hacker%20Aplicativo", "excerpt": "", "featuredImage": false } };
     </script>
-    <script src='js/frontend313.min.js'
-        id='elementor-frontend-js'></script>
-    <script
-        src='js/elements-handlers.min.js'
-        id='pro-elements-handlers-js'></script>
+    <script src='js/frontend313.min.js' id='elementor-frontend-js'></script>
+    <script src='js/elements-handlers.min.js' id='pro-elements-handlers-js'></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 
